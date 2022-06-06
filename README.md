@@ -28,6 +28,24 @@ I will include a more detailed notebook that I hope to link here! I have 17 cook
 
 ### Cleaning The Data
 
+#### Variables
+
+Name: the name of the recipe
+Aurthor: the person who wrote the recipe
+Main_Source: the name of the cookbook or blog
+Sub_Source: the page number or weblink
+Ingredients: a list of the ingredients in the recipe with the amount in parentheses
+Cooktime: the complete time in minutes it takes the make the recipe (does not include soak or rest times) 
+Cuisine: culture who the recipe is inspired by
+Gluten-Free: recipe does not include gluten, 0-no and 1-yes
+Nut_Free: recipe does not include nut, 0-no and 1-yes
+Oil_Free: recipe does not include oil, 0-no and 1-yes
+Soy_Free: recipe does not include soy, 0-no and 1-yes
+No_Added_Sugar: recipe does not any added sugar, 0-no and 1-yes
+Refined_Sugar_Free: recipe does not include refined sugars like can sugar, 0-no and 1-yes
+Raw: recipe does not need to be cooked on the stove or baked, 0-no and 1-yes
+
+
 ### Exploratory Data Analysis 
 
 ### Feature Engineering
