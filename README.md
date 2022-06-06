@@ -29,8 +29,8 @@ I will include a more detailed notebook that I hope to link here! I have 17 cook
 
 #### Variables
 
-*Name: the name of the recipe
-*Aurthor: the person who wrote the recipe
+Name: the name of the recipe
+Aurthor: the person who wrote the recipe
 Main_Source: the name of the cookbook or blog
 Sub_Source: the page number or weblink
 Ingredients: a list of the ingredients in the recipe with the amount in parentheses
