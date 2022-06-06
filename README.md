@@ -44,7 +44,8 @@ Oil_Free: recipe does not include oil, 0-no and 1-yes
 Soy_Free: recipe does not include soy, 0-no and 1-yes    
 No_Added_Sugar: recipe does not any added sugar, 0-no and 1-yes   
 Refined_Sugar_Free: recipe does not include refined sugars like can sugar, 0-no and 1-yes   
-Raw: recipe does not need to be cooked on the stove or baked, 0-no and 1-yes   
+Raw: recipe does not need to be cooked on the stove or baked, 0-no and 1-yes  
+Last_Made: the last time I made the recipe (MM-DD-YYYY)
 
 
 ### Exploratory Data Analysis 
