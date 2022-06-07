@@ -38,8 +38,8 @@ Sub_Source: the page number or weblink
 Ingredients: a list of the ingredients in the recipe with the amount in parentheses  
 Cooktime: the complete time in minutes it takes the make the recipe (does not include soak or rest times)   
 Cuisine: culture who the recipe is inspired by  
-Type: the type of recipe is, (ex. Salad, Soup, Entree, Breakfast, Dessert)
-Gluten-Free: recipe does not include gluten, 0-no and 1-yes  
+Type: the type of recipe is, (ex. Salad, Soup, Entree, Breakfast, Dessert)   
+Gluten-Free: recipe does not include gluten, 0-no and 1-yes    
 Nut_Free: recipe does not include nut, 0-no and 1-yes   
 Oil_Free: recipe does not include oil, 0-no and 1-yes   
 Soy_Free: recipe does not include soy, 0-no and 1-yes    
