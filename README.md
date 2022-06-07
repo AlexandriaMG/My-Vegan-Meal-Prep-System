@@ -25,7 +25,7 @@ How much does my meal prep time reduce? What is it currently? Do I stick with th
 
 I have 17 cookbooks and 8 vegan blogs that I want to collect recipe data from. I am going to use a scan to an ORC (Optical Character Recognition) system for the cookbooks and make a web spider for the blogs.   
 
-I used CamScanner app to take pictures of the cookbook's index and (http://www.free-online-ocr.com/) for the ORC system to copy and paste the names of the recipes. 
+I used CamScanner app to take pictures of the cookbook's index and (http://www.free-online-ocr.com/) for the ORC system to copy and paste the names of the recipes. I in put other variables by hand because this was the most time-efficent way I could think of. 
 
 ### Cleaning The Data
 
