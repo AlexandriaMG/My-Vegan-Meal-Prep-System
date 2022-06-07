@@ -36,7 +36,7 @@ Aurthor: the person who wrote the recipe
 Main_Source: the name of the cookbook or blog  
 Sub_Source: the page number or weblink  
 Ingredients: a list of the ingredients in the recipe with the amount in parentheses  
-Cooktime: the complete time in minutes it takes the make the recipe (does not include soak or rest times)   
+Cooktime: the complete time in minutes it takes the make the recipe    
 Cuisine: culture who the recipe is inspired by  
 Type: the type of recipe is, (ex. Salad, Soup, Entree, Breakfast, Dessert)   
 Gluten-Free: recipe does not include gluten, 0-no and 1-yes    
