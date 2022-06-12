@@ -27,15 +27,15 @@ I have 17 cookbooks and 8 vegan blogs that I want to collect recipe data from. I
 
 I used CamScanner app to take pictures of the cookbook's index and (http://www.free-online-ocr.com/) for the ORC system to copy and paste the names of the recipes. I in put other variables by hand because this was the most time-efficent way I could think of. 
 
-### Cleaning The Data
 
-#### Variables
+### Tables
+
+#### Recipe Table
 
 Name: the name of the recipe  
 Aurthor: the person who wrote the recipe  
 Main_Source: the name of the cookbook or blog  
 Sub_Source: the page number or weblink  
-Ingredients: a list of the ingredients in the recipe with the amount in parentheses  
 Cooktime: the complete time in minutes it takes the make the recipe    
 Cuisine: culture who the recipe is inspired by  
 Type: the type of recipe is, (ex. Salad, Soup, Entree, Breakfast, Dessert)   
@@ -49,10 +49,8 @@ Raw: recipe does not need to be cooked on the stove or baked, 0-no and 1-yes
 Last_Made: the last time I made the recipe (MM-DD-YYYY)
 
 
-### Exploratory Data Analysis 
+#### Ingredient Table
 
-### Feature Engineering
+#### Grocery Table
 
-### Modelling
 
-### Communication
