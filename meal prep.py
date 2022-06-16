@@ -1,7 +1,54 @@
- 
+#Alexandria Morales-Garcia
+#Vegan Meal Prep Project 
+
+#Reccomdation System
+
+
+from sympy import jn
+import sqlite3
+
+conn = sqlite3.connect('Recipe_database.db')
+c = conn.cursor()
+
+def createTables():
+    'Puts Recipe, Ingredents, and Grocery tables in SQL Light'
+    
+    #Define Tables and columns
+    recipesTable = '''CREATE TABLE Recipes(
+               RecipeID     INTEGER NOT NULL,
+               Name      VARCHAR(100),
+               Aurthor     VARCHAR(50),
+               MainSource      VARCHAR(200),
+               SubSource      VARCHAR(200),
+               Cooktime     NUMERIC(6,2),
+               Cuisine    VARCHAR(25),
+               TypeR      VARCHAR(25),
+               GlutenFree       INTEGER,
+               NutFree       INTEGER, 
+               OilFree       INTEGER,
+               SoyFree       INTEGER,
+               NoAddedSugar       INTEGER,
+               RefinedSugarFree       INTEGER,
+               RawR       INTEGER,
+               LastMade      VARCHAR(10),
+               
+               PRIMARY KEY (RecipeID) 
+          );'''
+    
+    # Runs the code in SQL light 
+    c.execute('DROP TABLE IF EXISTS Recipes;')
+    c.execute(recipesTable)
+    
+    #teseting 
+    newData = [ 1,'Cinnamony French Toast with Apple Compote', 'Hannah Sunderani','The Two Spoons Cookbook',29,30,'French','Breakfast',0,0,0,0,0,1,0,'NA']
+    c.execute('Insert into  Recipes VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);',newData)
+    print(c.execute('Select * from Recipes ;').fetchall())
+
+createTables()
+
 def Questions():
     'Asks a series of cooking questions and return an answer list'
-    answers = []
+    answers = [] 
     print("How many suggestions would you like?" ) 
     answers.append(input())
     print("How many recipes would you like this to aply to?")
@@ -18,5 +65,12 @@ def Questions():
 
 
 
-   
+
+#Grocery List
+
+#def inSQL():
+   # import sqlite3 as sql 
+
+    
+
 
