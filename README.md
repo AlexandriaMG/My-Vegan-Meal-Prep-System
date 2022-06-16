@@ -31,7 +31,7 @@ I used CamScanner app to take pictures of the cookbook's index and (http://www.f
 ### Tables
 
 #### Recipe Table
-
+Recipe ID: an unique identification number for each recipe     
 Name: the name of the recipe  
 Aurthor: the person who wrote the recipe  
 Main_Source: the name of the cookbook or blog  
@@ -50,7 +50,12 @@ Last_Made: the last time I made the recipe (MM-DD-YYYY)
 
 
 #### Ingredient Table
+Ingredient ID: an unique identification each ingredient   
+Ingredient: the name of each ingredient    
 
 #### Grocery Table
-
+Recipe ID: an unique identification number for each recipe     
+Ingredient ID: an unique identification each ingredient       
+Amount: the numerical value associated with the amount of the ingredient in the recipe       
+Measurement: the way in which the ingredient is measured (ex. tbs)       
 
