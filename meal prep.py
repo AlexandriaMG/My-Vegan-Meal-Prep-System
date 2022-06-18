@@ -35,14 +35,26 @@ def createTables():
                PRIMARY KEY (RecipeID) 
           );'''
     
+    ingredientsTable= '''CREATE TABLE Ingredients (
+               IngredientId     INTEGER NOT NULL,
+               Ingredient      VARCHAR(100),
+               
+               PRIMARY KEY (ingredientId) 
+          );'''
+
     # Runs the code in SQL light 
     c.execute('DROP TABLE IF EXISTS Recipes;')
     c.execute(recipesTable)
+    c.execute('DROP TABLE IF EXISTS Ingredients;')
+    c.execute(ingredientsTable)
     
     #teseting 
     newData = [ 1,'Cinnamony French Toast with Apple Compote', 'Hannah Sunderani','The Two Spoons Cookbook',29,30,'French','Breakfast',0,0,0,0,0,1,0,'NA']
+    newData2= [1, 'apple']
     c.execute('Insert into  Recipes VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);',newData)
+    c.execute('Insert into  Ingredients VALUES(?,?);',newData2)
     print(c.execute('Select * from Recipes ;').fetchall())
+    print(c.execute('Select * from Ingredients ;').fetchall())
 
 createTables()
 
