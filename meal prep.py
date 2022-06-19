@@ -23,13 +23,13 @@ def createTables():
                Cooktime     NUMERIC(6,2),
                Cuisine    VARCHAR(25),
                TypeR      VARCHAR(25),
-               GlutenFree       INTEGER,
-               NutFree       INTEGER, 
-               OilFree       INTEGER,
-               SoyFree       INTEGER,
-               NoAddedSugar       INTEGER,
-               RefinedSugarFree       INTEGER,
-               RawR       INTEGER,
+               GlutenFree       BOOL,
+               NutFree       BOOL, 
+               OilFree       BOOL,
+               SoyFree       BOOL,
+               NoAddedSugar       BOOL,
+               RefinedSugarFree       BOOL,
+               RawR       BOOL,
                LastMade      VARCHAR(10),
                
                PRIMARY KEY (RecipeID) 
@@ -39,7 +39,18 @@ def createTables():
                IngredientId     INTEGER NOT NULL,
                Ingredient      VARCHAR(100),
                
-               PRIMARY KEY (ingredientId) 
+               PRIMARY KEY (IngredientId) 
+          );'''
+
+    groceryTable= '''CREATE TABLE Grocery (
+               RecipeID     INTEGER NOT NULL,
+               IngredientId     INTEGER NOT NULL,
+               Amount      DECIMAL(6, 3),
+               Measurement  VARCHAR(10),
+
+               PRIMARY KEY (RecipeID, IngredientId), 
+               FOREIGN KEY (RecipeID) REFERENCES Recipes(RecipeID),
+               FOREIGN KEY (IngredientId) REFERENCES Ingredients(IngredientId)
           );'''
 
     # Runs the code in SQL light 
@@ -47,14 +58,19 @@ def createTables():
     c.execute(recipesTable)
     c.execute('DROP TABLE IF EXISTS Ingredients;')
     c.execute(ingredientsTable)
+    c.execute('DROP TABLE IF EXISTS Grocery;')
+    c.execute(groceryTable)
     
     #teseting 
     newData = [ 1,'Cinnamony French Toast with Apple Compote', 'Hannah Sunderani','The Two Spoons Cookbook',29,30,'French','Breakfast',0,0,0,0,0,1,0,'NA']
     newData2= [1, 'apple']
+    newData3= [1,1,4,'each']
     c.execute('Insert into  Recipes VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);',newData)
     c.execute('Insert into  Ingredients VALUES(?,?);',newData2)
+    c.execute('Insert into  Grocery VALUES(?,?,?,?);',newData3)
     print(c.execute('Select * from Recipes ;').fetchall())
     print(c.execute('Select * from Ingredients ;').fetchall())
+    print(c.execute('Select * from Grocery ;').fetchall())
 
 createTables()
 
