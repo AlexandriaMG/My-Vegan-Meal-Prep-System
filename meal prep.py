@@ -60,6 +60,10 @@ def createTables():
     c.execute(ingredientsTable)
     c.execute('DROP TABLE IF EXISTS Grocery;')
     c.execute(groceryTable)
+
+
+
+    '''
     
     #teseting 
     newData = [ 1,'Cinnamony French Toast with Apple Compote', 'Hannah Sunderani','The Two Spoons Cookbook',29,30,'French','Breakfast',0,0,0,0,0,1,0,'NA']
@@ -70,9 +74,8 @@ def createTables():
     c.execute('Insert into  Grocery VALUES(?,?,?,?);',newData3)
     print(c.execute('Select * from Recipes ;').fetchall())
     print(c.execute('Select * from Ingredients ;').fetchall())
-    print(c.execute('Select * from Grocery ;').fetchall())
+    print(c.execute('Select * from Grocery ;').fetchall()) '''
 
-createTables()
 
 def Questions():
     'Asks a series of cooking questions and return an answer list'
@@ -91,7 +94,12 @@ def Questions():
     answers.append(input())
     return answers
 
-
+def FreeOfQuery(ingredient):
+    'excutes a query if you are looking for recipes free of the requested ingredient'
+    request = f'''select RecipeID, Name, Aurthor, MainSource, SubSource 
+                From Recipes 
+                Where {ingredient} == 1;  '''
+    print(c.execute(request).fetchall())
 
 
 #Grocery List
